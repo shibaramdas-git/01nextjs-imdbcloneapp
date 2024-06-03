@@ -1,12 +1,13 @@
 import Menuitem from "./Menuitem";
 import { HiMiniInformationCircle } from "react-icons/hi2";
 import { FaHome } from "react-icons/fa";
+import DarkModeSwitch from "./DarkModeSwitch";
 
 function Header() {
   return (
     //Header component
-    <div className="max-w-[1025px] flex justify-between items-center h-[50px] w-[99%] mx-auto 0 my-2">
-      <div className="flex text-xl gap-3">
+    <div className="max-w-[1400px] flex justify-between items-center h-[50px] w-[99%] mx-auto pt-2">
+      <div className="flex text-xl gap-4">
         <Menuitem title="Home" address="/" Icon={FaHome} />
         <Menuitem
           title="About"
@@ -14,8 +15,9 @@ function Header() {
           Icon={HiMiniInformationCircle}
         />
       </div>
-      <div>
-        <span className="text-2xl font-bold bg-amber-500 rounded-sm px-3 py-1/2 mr-3">
+      <div className="flex gap-4 items-center">
+        <DarkModeSwitch />
+        <span className="text-2xl font-bold bg-amber-500 rounded-sm px-3 py-1/2">
           IMBD
         </span>
         <span className="text-xl hidden sm:inline">Clone</span>

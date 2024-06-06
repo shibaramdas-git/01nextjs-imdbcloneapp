@@ -1,3 +1,4 @@
+import Result from "@/components/Result";
 const OMDB_KEY = process.env.OMDB_KEY;
 export default async function HomePage({ searchParams }) {
   const genre = searchParams.genre || "movie";
@@ -17,20 +18,14 @@ export default async function HomePage({ searchParams }) {
   // );
   const data = await res.json();
   const movies = data.Search;
-  console.log(data);
+  // console.log(movies);
   if (data.Response == "False") {
     throw new Error("OOPS!! Failed to fetch data from database..");
   }
   return (
-    <div>
-      {data &&
-        movies.map((movie) => (
-          <div key={movie.imdbID}>
-            <h3>{movie.Title}</h3>
-            <p>Year : {movie.Year}</p>
-          </div>
-        ))}
-    </div>
+    <>
+      <Result movies={movies} />
+    </>
   );
 }
 // {next: {revalidate: 20}} in fetch method for cashing after 20sec

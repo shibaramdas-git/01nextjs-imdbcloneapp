@@ -9,24 +9,24 @@ export default function Navbar() {
   return (
     <div className="flex justify-center gap-8 bg-yellow-100 text-lg py-3 dark:bg-slate-600 ">
       <Link
-        href="?genre=fetchTrending"
+        href="?genre=movie"
         className={`hover:text-amber-500 ${
-          genre === "fetchTrending"
+          genre === "movie"
             ? "underline decoration-amber-500 decoration-4 underline-offset-8"
             : ""
         }`}
       >
-        Trending
+        Movies
       </Link>
       <Link
-        href="?genre=fetchTopRated"
+        href="?genre=series"
         className={`hover:text-amber-500 ${
-          genre === "fetchTopRated"
+          genre === "series"
             ? "underline decoration-amber-500 decoration-4 underline-offset-8"
             : ""
         }`}
       >
-        Top Rated
+        Series
       </Link>
     </div>
   );

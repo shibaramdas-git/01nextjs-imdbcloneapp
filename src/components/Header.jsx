@@ -18,7 +18,7 @@ function Header() {
       <div className="flex gap-4 items-center">
         <DarkModeSwitch />
         <span className="text-2xl font-bold bg-amber-500 rounded-sm px-3 py-1/2">
-          IMBD
+          IMDB
         </span>
         <span className="text-xl hidden sm:inline">Clone</span>
       </div>

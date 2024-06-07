@@ -1,23 +1,24 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Card({ movie }) {
-  const { Title, Year, Type, Poster } = movie;
+  const { Title, Year, Type, Poster, imdbID } = movie;
   return (
-    <div className="border border-black ">
-      <div className="">
-        <img src={Poster} alt="Movie image" className="w-full h-[400px] " />
+    <div className="shadow-xl border-[0.4px] border-gray-400 rounded-lg  mb-8 sm:mb-2 dark:bg-slate-600 p-1 ">
+      <div>
+        <Link className="" href={`http://www.omdbapi.com/?i=${imdbID}&`}>
+          <Image
+            src={Poster}
+            alt="Movie Poster"
+            width={400}
+            height={600}
+            className="w-full rounded-t-lg"
+          />
+        </Link>
       </div>
-      <h3>{Title}</h3>
-      <p>
-        <span className="font-bold">Year : </span>
-        <span>{Year}</span>
-      </p>
-      <p>
-        <span className="font-bold">Type : </span>
-        <span>{Type}</span>
-      </p>
-      <p>
-        <span className="font-bold">Type : </span>
-        <span>{Type}</span>
-      </p>
+      <h2 className="font-normal text-xl mt-4 pl-2">
+        {Title} ({Year})
+      </h2>
     </div>
   );
 }

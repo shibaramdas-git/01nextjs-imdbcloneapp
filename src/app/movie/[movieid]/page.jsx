@@ -31,7 +31,6 @@ export default async function Moviepage({ params }) {
         <p className="flex flex-wrap justify-between sm:w-[80%] pt-8 ">
           <span>{data.Released}</span>
           <span>{data.Runtime}</span>
-          <span>{data.Language}</span>
           <span>{data.imdbRating} Star</span>
         </p>
         <p>Director : {data.Director}</p>

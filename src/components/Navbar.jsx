@@ -7,7 +7,7 @@ export default function Navbar() {
   const genre = queryParam.get("genre");
 
   return (
-    <div className="flex justify-center gap-8 bg-neutral-700 text-lg py-3 dark:bg-slate-600 text-white">
+    <div className="flex justify-center gap-8 bg-neutral-700 text-lg py-3 dark:bg-slate-600 text-white h-16 items-center">
       <Link
         href="?genre=movie"
         className={`hover:text-amber-500 ${

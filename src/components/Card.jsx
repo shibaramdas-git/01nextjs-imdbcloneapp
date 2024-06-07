@@ -14,6 +14,10 @@ export default function Card({ movie }) {
         <span className="font-bold">Type : </span>
         <span>{Type}</span>
       </p>
+      <p>
+        <span className="font-bold">Type : </span>
+        <span>{Type}</span>
+      </p>
     </div>
   );
 }

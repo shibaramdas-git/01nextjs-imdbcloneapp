@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Card({ movie }) {
-  const { Title, Year, Type, Poster, imdbID } = movie;
+  const { Title, Year, Poster, imdbID } = movie;
   return (
     <div className="shadow-xl border-[0.4px] border-gray-400 rounded-lg  mb-8 sm:mb-2 dark:bg-slate-600 p-1 ">
       <div>
-        <Link className="" href={`http://www.omdbapi.com/?i=${imdbID}&`}>
+        <Link className="" href={`/movie/${imdbID}`}>
           <Image
             src={Poster}
             alt="Movie Poster"
